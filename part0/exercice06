@@ -1,0 +1,10 @@
+note over browser:
+browser creates new note on browser side
+browser refreshes the DOM notes list
+end note
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+note over server:
+server pushes the new note into data.json file
+server returns a simple acknowledgement json message
+end note
+server-->browser: json-data {"message":"note created"}
